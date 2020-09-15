@@ -1,6 +1,7 @@
 package Sortings;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import static Sortings.funcs.*;
 
@@ -27,5 +28,16 @@ public class Quick {
         }
         exchange(a, lo, j);
         return j;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        ArrayList<Integer> a = new ArrayList<Integer>();
+        while (sc.hasNextInt()){
+            a.add(sc.nextInt());
+        }
+        sort(a);
+        assert isSorted(a);
+        show(a);
     }
 }
