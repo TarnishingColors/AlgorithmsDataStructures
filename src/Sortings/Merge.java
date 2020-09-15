@@ -16,7 +16,6 @@ public class Merge {
             if (aux.size() <= k) aux.add(a.get(k));
             else aux.set(k, a.get(k));
         }
-        show(aux);
         for (int k = lo; k <= hi; k++) {
             if (i > mid) a.set(k, aux.get(j++));
             else if (j > hi) a.set(k, aux.get(i++));
